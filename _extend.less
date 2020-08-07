@@ -1,0 +1,420 @@
+/*
+ * Copyright © Pronko Consulting (https://www.pronkoconsulting.com)
+ * See LICENSE for the license details.
+ */
+
+& when (@media-common = true) {
+    .catalog-product-view {
+        h1 {
+            &.page-title {
+                font-size: 2.6rem;
+            }
+        }
+
+        .product {
+            &.info {
+                .detailed {
+
+                    h3 {
+                        text-align: center;
+                        font-size: 2.4rem;
+                        font-weight: 500;
+                        margin-top: 3rem;
+                    }
+                }
+            }
+        }
+
+        .product.data.items {
+            > .item {
+                &.title {
+                    float: none;
+
+                    > .switch {
+                        text-transform: uppercase;
+                        min-height: 4rem;
+                        padding: 1.2rem;
+                        position: relative;
+                    }
+
+                    &.active {
+
+                        a {
+                            &:after {
+                                content: '\e621';
+                            }
+                        }
+                    }
+
+                    a {
+                        &:after {
+                            content: '\e622';
+                            position: absolute;
+                            right: 1rem;
+                            top: 2.4rem;
+                            font-family: 'icons-blank-theme';
+                            font-size: 3.4rem;
+                            font-weight: normal;
+                            overflow: hidden;
+                            speak: none;
+                            text-align: center;
+                            line-height: 10px;
+                        }
+                    }
+                }
+                &.content {
+                    float: none;
+                    margin-left: 0;
+                    border-top: 0;
+                }
+            }
+        }
+
+        .product-info-main {
+            .box-tocart {
+                .action {
+                    &.tocart {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .special-price {
+            .lib-css(color, @color-red10);
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .old-price {
+            text-decoration: none;
+            &:before {
+                content: 'Was ';
+                font-size: 2.4rem;
+                margin-left: 3rem;
+            }
+            .price {
+                text-decoration: line-through;
+            }
+        }
+
+        .price {
+            font-size: 2.4rem !important;
+        }
+
+        .you-save-price {
+            display: block;
+
+            .price-container {
+
+                .lib-css(color, @color-red10);
+            }
+        }
+
+        table {
+            &.size-chart-table {
+                .lib-css(border, @sitename__border);
+
+                th {
+                    .lib-css(background, @sitename-color-main);
+                    .lib-css(color, @sitename-color-grey);
+                    .lib-css(padding, 1.8rem 0);
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                tr {
+                    text-align: @text-right;
+
+                    &:nth-child(odd) {
+                        td {
+                            background: @color-gray94;
+                        }
+                    }
+                    &:nth-child(even) {
+                        td {
+                            background: @color-gray91;
+                        }
+                    }
+                }
+            }
+        }
+
+        .product {
+            &-item {
+                &-info {
+                    width: 100%;
+                    margin: 1rem;
+                }
+
+                &:hover {
+                    .lib-css(box-shadow, @sitename-box-shadow, @_prefix: 1);
+                    z-index: 99;
+                }
+            }
+        }
+
+        .wash-care-block {
+            margin: 4rem 0;
+        }
+    }
+
+    .pages {
+        strong {
+            &.page {
+                .lib-css(background, @sitename-color-main);
+                .lib-css(border-radius, 50%);
+                .lib-css(padding, 0);
+                .lib-css(color, @sitename-color-grey);
+                width: 3rem;
+                height: 3rem;
+                text-align: center;
+            }
+        }
+
+        .item {
+            margin: 0 1rem 0 0;
+
+            a,
+            a:visited
+            {
+                .lib-css(color, @sitename-color-main);
+            }
+        }
+
+        .action {
+            border: 0;
+
+            &.next, &.previous {
+                &:visited {
+                    &:before {
+                        .lib-css(color, @sitename-color-main);
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        &.messages {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .toolbar {
+        &-products {
+            text-align: @text-left;
+            padding-top: 2rem;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    table {
+        &.size-chart-table {
+            th {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+// Custom success
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page {
+        &.messages {
+            &.mobile {
+                display: block;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product.data.items {
+        > .item {
+            &.title {
+                &:not(.disabled) {
+                    > .switch {
+                        &:hover {
+                            .lib-css(background, @color-gray94);
+                        }
+                    }
+                }
+            }
+            &.content {
+                padding-top: 0;
+            }
+        }
+    }
+
+    table {
+        &.size-chart-table {
+            th {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .catalog-category-view {
+
+        .grid {
+            &.products {
+
+                &-grid {
+
+                    .product {
+
+                        &-item {
+
+                            &-info {
+                                padding: 0;
+
+                                &:hover {
+                                    .lib-css(box-shadow, @sitename-box-shadow, @_prefix: 1);
+                                }
+                            }
+
+                            &-details {
+
+                                .price {
+
+                                    &-box {
+
+                                        .special-price {
+                                            display: inline-block;
+
+                                            .price {
+                                                .lib-css(color, @color-red10);
+                                            }
+                                        }
+                                        .old-price {
+                                            display: inline-block;
+                                            text-decoration: none;
+                                            margin-left: 1rem;
+
+                                            &:before {
+                                                content: 'Was ';
+                                            }
+
+                                            .price {
+                                                text-decoration: line-through;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tabs
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product.data.items {
+        > .item {
+            &.title {
+                border-bottom: @sitename__border_base;
+            }
+        }
+    }
+}
+// Custom success
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page {
+        &.messages {
+            &.mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+// Category Products. Set 3 per row as default
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-products {
+        .products-grid {
+            .product-items {
+                margin: 0;
+            }
+
+            .product-item {
+                margin-left: 0;
+                padding: 0;
+                width: calc(~'(100% - 0%) / 3 - 0.01px');
+
+                &:nth-child(3n + 1) {
+                    margin-left: 0;
+                }
+
+                &:nth-child(4n + 1) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+// Category Products. Item width
+
+& when (@media-common = true) {
+    .product {
+        &-item {
+            &-info {
+                .page-products & {
+                    width: 300px;
+                }
+
+                .details {
+                    padding: .5rem 1rem;
+                    min-height: 12rem;
+                }
+            }
+        }
+        &-image {
+            &-photo {
+                overflow: hidden;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Fix for Amasty Slider
+
+& when (@media-common = true) {
+    .catalog-category-view {
+        .amrelated-grid-wrapper {
+            .grid {
+                &.products {
+
+                    &-grid {
+
+                        .product {
+
+                            &-item {
+
+                                &-info {
+                                    padding: 2rem 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

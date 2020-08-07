@@ -1,0 +1,147 @@
+/*
+ * Copyright © Pronko Consulting (https://www.pronkoconsulting.com)
+ * See LICENSE for the license details.
+ */
+
+@sitename-color-main: hsl(138, 13%, 42%);
+@sitename-color-main-background: hsla(138, 13%, 42%, .5);
+@sitename-color-main-darker: hsl(138, 12%, 32%);
+@sitename-color-grey: hsl(210, 9%, 96%);
+@sitename__border: 1px solid @sitename-color-grey;
+@sitename__border_base: 1px solid @border-color__base;
+@sitename__border-green: 1px solid @sitename-color-main;
+@sitename__primary__text__color: hsl(0, 0%, 39%);
+@sitename_nav-font-size: 1.8rem;
+@sitename_nav-font-size__mobile: 1.8vw;
+@sitename-box-shadow: 0 .9rem 2.2rem -.5rem hsla(240, 30%, 28%, 0.25), 0 .5rem 1.4rem -.8rem hsla(0, 0%, 0%, 0.3), 0 -.6rem 1.5rem -.6rem hsla(0, 0%, 0%, 0.025);
+@sitename-color-link__transition: fill .3s ease;
+
+@sitename-currency__ca: url('@{baseDir}images/currency/ca.svg') no-repeat;
+@sitename-currency__eu: url('@{baseDir}images/currency/eu.svg') no-repeat;
+@sitename-currency__us: url('@{baseDir}images/currency/us.svg') no-repeat;
+@sitename-currency__au: url('@{baseDir}images/currency/au.svg') no-repeat;
+@sitename-currency__gb: url('@{baseDir}images/currency/gb.svg') no-repeat;
+
+@sitename-icon-cart: url('@{baseDir}images/basketIcon.svg');
+@sitename-icon-user: url('@{baseDir}images/userIcon.svg') no-repeat;
+
+@text-right: end;
+@text-left: start;
+
+@button-primary__color: @color-white;
+@button-primary__hover__color: @color-white;
+@button-primary__background: @sitename-color-main;
+@button-primary__hover__background: @sitename-color-main-darker;
+@button-primary__border: 1px solid @sitename-color-main;
+@button-primary__hover__border: 1px solid @sitename-color-main-darker;
+
+@text__color: @sitename__primary__text__color;
+@icon-cart: @sitename-icon-cart;
+
+@link__color: @sitename-color-main;
+@link__hover__color: @sitename-color-main-darker;
+
+@text__color: hsl(0, 0%, 31%);
+
+
+// Navigation
+@navigation__background: @sitename-color-main;
+@navigation__border: '';
+
+@navigation-level0-item__color: @sitename-color-grey;
+@submenu-desktop-item__color: @sitename-color-main;
+@submenu-desktop-item__hover__background: @sitename-color-main;
+
+@navigation-desktop-level0-item__color: @sitename-color-grey;
+@navigation-desktop-level0-item__hover__color: @sitename-color-grey;
+@navigation-desktop-level0-item__active__color: @navigation-desktop-level0-item__color;
+
+@navigation-level0-item__background: '';
+@navigation-level0-item__border: 1px solid @color-gray82;
+@navigation-level0-item__color: @sitename-color-main;
+@navigation-level0-item__text-decoration: none;
+@navigation-desktop-level0-item__active__border-color: @sitename-color-main-darker;
+
+@submenu-desktop__min-width: 30rem;
+@submenu-desktop__background: #F2F3F5;
+@submenu-item__color: @sitename-color-grey;
+
+@navigation-desktop-level0-item__margin: 0 @indent__s 0 0;
+
+.text-right {
+    text-align: @text-right;
+}
+.text-left {
+    text-align: @text-left;
+}
+
+@total-columns: 24;
+@layout-column__sidebar-width: 5;
+@layout-column-checkout__width-left: 6;
+@checkout-wrapper__columns: 12;
+@checkout-sidebar__columns: 8;
+
+@layout-column-checkout__width-left: 6;
+
+@active__color: @sitename-color-main;
+
+
+//  Default = secondary button
+@button__color: @sitename-color-main;
+@button__background: transparent;
+@button__border: 1px solid @sitename-color-main;
+
+@button__hover__color: @sitename-color-main;
+@button__hover__background: @sitename-color-grey;
+@button__hover__border: @button__border;
+
+
+//
+//  Messages
+//  _____________________________________________
+
+@message-global-note__background: @sitename-color-grey;
+@message-global-note__border-color: @sitename-color-grey;
+
+//
+//  Color swatches
+//  _____________________________________________
+@swatch-option__background: @color-white;
+@swatch-option__hover__outline: 1px solid @sitename-color-main;
+@attr-swatch-option__color: @color-black;
+
+
+//
+// Contact Page
+//
+@form-field-type-label-inline__align: @text-left;
+
+//
+// Product Page Tabs
+//
+@tab-content__border: '';
+@accordion-control__border-top: '';
+@accordion-control__border-right: '';
+@accordion-control__border-left: '';
+
+@accordion-control__margin-bottom: 0;
+
+@tab-control__line-height: '';
+
+@tab-control__padding-bottom: 11px;
+
+@tab-control__active__background-color: @color-white-fog;
+@accordion-content__background-color: @color-white;
+@tab-content__background-color: @color-white;
+
+@tab-control__font-size: 1.8rem;
+
+@tab-control__padding-top: @indent__s;
+@tab-control__padding-right: @indent__s;
+@tab-control__padding-bottom: @indent__s;
+@tab-control__padding-left: @indent__s;
+
+//
+// Typography
+//
+@h1__margin-bottom__desktop: 0;
